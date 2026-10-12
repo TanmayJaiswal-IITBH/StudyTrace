@@ -1,0 +1,14 @@
+.git
+.claude
+.venv
+.env
+.env.*
+!.env.example
+**/__pycache__
+.pytest_cache
+.ruff_cache
+pgdata
+tests
+web
+demo
+node_modules

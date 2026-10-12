@@ -1,6 +1,7 @@
 # StudyTrace
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![CI](https://github.com/TanmayJaiswal-IITBH/StudyTrace/actions/workflows/ci.yml/badge.svg)](https://github.com/TanmayJaiswal-IITBH/StudyTrace/actions/workflows/ci.yml)
 
 StudyTrace reads your Google Classroom, college email and notes, remembers what you've learned and
 what's due, and lets you trace every piece of advice back to the exact email, note or quiz it came
