@@ -1,0 +1,9 @@
+# OpenShell egress policy for the StudyTrace sandbox.
+#
+# Day 1 placeholder. The real allowlist lands with the sandbox setup (Oct 13 to 14), or the
+# Docker network allowlist is used instead if OpenShell blocks (see CLAUDE.md, Scope discipline).
+#
+# Rules this policy must enforce:
+#   - local_only data never leaves the sandbox.
+#   - Only the hosts below may be reached (Token Factory, Tavily, Google read-only APIs, Telegram).
+allowlist: []

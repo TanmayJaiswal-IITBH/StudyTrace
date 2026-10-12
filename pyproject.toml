@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "studytrace"
+version = "0.1.0"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "fastapi>=0.115", "uvicorn[standard]>=0.30", "pydantic>=2.8", "pydantic-settings>=2.4",
+  "sqlalchemy>=2.0", "psycopg[binary]>=3.2", "pgvector>=0.3", "alembic>=1.13",
+  "openai>=1.40",   # Token Factory is OpenAI-compatible; used only inside llm.py
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov", "httpx", "ruff>=0.6", "black>=24.8", "pre-commit"]
+
+[tool.setuptools.packages.find]
+include = ["memory_service*", "ingest*", "hermes_plugin*", "jobs*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ANN", "S"]
+ignore = ["B008"]  # FastAPI Depends() defaults
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "ANN"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
