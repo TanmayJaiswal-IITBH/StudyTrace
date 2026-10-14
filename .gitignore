@@ -48,3 +48,7 @@ Thumbs.db
 
 # --- Claude Code local state ---
 .claude/settings.local.json
+
+# --- Local planning docs (kept out of the repo) ---
+CLAUDE.md
+GOAL.md

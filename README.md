@@ -7,8 +7,7 @@ StudyTrace reads your Google Classroom, college email and notes, remembers what 
 what's due, and lets you trace every piece of advice back to the exact email, note or quiz it came
 from.
 
-Built for the Nebius x NVIDIA Global AI Hackathon, Personal AI track. See [GOAL.md](GOAL.md) for
-what "done" means and [CLAUDE.md](CLAUDE.md) for the engineering rules.
+Built for the Nebius x NVIDIA Global AI Hackathon, Personal AI track.
 
 ## Quickstart
 
