@@ -12,7 +12,7 @@ Built for the Nebius x NVIDIA Global AI Hackathon, Personal AI track. Submission
 
 ## Hard requirements (never break these)
 
-- Every LLM call goes through **Nebius Token Factory** using **NVIDIA Nemotron** models. No other model providers in the runtime path.fV
+- Every LLM call goes through **Nebius Token Factory** using **NVIDIA Nemotron** models. No other model providers in the runtime path.
 - The repo stays public with the **Apache-2.0** license visible at the top.
 - The agent has **read-only email access**. Never add code that sends, forwards, deletes or modifies email.
 - The agent has **read-only Google Classroom access**. Only request `.readonly` scopes; never submit, turn in, comment on or modify anything in Classroom.
@@ -138,6 +138,12 @@ Classroom is the primary structured source; email and notes fill in what Classro
 - **Database changes go through Alembic migrations**, never ad-hoc `ALTER TABLE`.
 - Dates are stored in UTC; display in the user's timezone (default `Asia/Kolkata`, `APP_TIMEZONE`).
 - Secrets are `SecretStr` in `config.py` so they never print in logs or tracebacks.
+- **Branches and PRs:** never push to `main`. Work on `day-N/<topic>` branches (e.g. `day-2/store-llm`), open a PR, and merge only when both CI jobs are green. `main` is protected once Day 1 is merged.
+- **Commits are the owner's:** commit as the repo owner only. Never add `Co-Authored-By`, `Claude-Session` or any other AI attribution trailer to commit messages or PR descriptions.
+
+## Current status (update when a milestone closes)
+
+As of Oct 14: Day 1 skeleton is on `main` (repo recreated Oct 14 with clean history). Oct 13 work (migration `0002` with all tables, `store.py`, `llm.py`) has not started and is folded into Oct 14 alongside Milestone 1. Model IDs in `.env.example` are still empty. See the execution plan for the re-baselined schedule.
 
 ## Security notes
 
